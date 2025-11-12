@@ -22,7 +22,9 @@ export default function RootLayout({
 		<body
 		className={`${hostGrotesk.className} antialiased`}
 		>
-		{children}
+			<div className="bg-gray-900 text-gray-100 w-lvw h-lvh flex justify-center items-center">
+				{children}
+			</div>
 		</body>
 	</html>
 	);
