@@ -1,17 +1,23 @@
-import Image from "next/image";
 import nextjsLogo from "@/../public/nextjs.svg";
+import typescriptLogo from "@/../public/typescript.svg";
+import reactLogo from "@/../public/react.svg";
+import mongodbLogo from "@/../public/mongodb.svg";
+import SkillsList from "./components/SkillsList";
+
+const skills: [string, string][] = [
+	["Next.js", nextjsLogo],
+	["TypeScript", typescriptLogo],
+	["React", reactLogo],
+	["MongoDB", mongodbLogo],
+	//["MySQL", mysqlLogo]
+];
 
 export default function Home() {
 	return (
 		<div className="flex-col">
-			<h1 className="text-6xl font-light mb-2">Astjan Selimaj</h1>
-			<p className="text-2xl mb-2">Full Stack Web Developer</p>
-			<div className="flex gap-2">
-				<div className="flex gap-1 pl-1 pr-2 bg-gray-500 rounded-2xl">
-					<Image src={nextjsLogo} alt="Next.js" />
-					<p>Next.js</p>
-				</div>
-			</div>
+			<h1 className="text-6xl font-light mb-1.5">Astjan Selimaj</h1>
+			<p className="text-2xl mb-3.5">Full Stack Web Developer</p>
+			<SkillsList skills={skills} />
 		</div>
 	);
 }
