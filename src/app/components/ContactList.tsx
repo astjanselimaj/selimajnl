@@ -1,19 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type Contact = [string, string, string];
+export type Contact = [string, string, string];
 
 export default function ContactList({ contacts }: { contacts: Contact[] }) {
-	/*return (
-		<div className="flex flex-wrap justify-center gap-2 my-5.5">
-			{contacts.map(([text, color, iconUrl, linkUrl], i) => (
-				<div className={`flex w-3/4 items-center gap-1 p-2 ${color} rounded-md`} key={i}>
-					<Image src={iconUrl} alt="GitHub" width={32} />
-					<p className="text-lg flex justify-center w-full">{text}</p>
-				</div>
-			))}
-		</div>
-	);*/
 	return (
 		<div className="flex flex-wrap gap-2">
 			{contacts.map(([alt, iconUrl, linkUrl], i) => (

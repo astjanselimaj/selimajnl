@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
+import { data } from "./data";
 
 const hostGrotesk = Host_Grotesk({
 	variable: "--font-host-grotesk",
@@ -8,8 +9,7 @@ const hostGrotesk = Host_Grotesk({
 });
 
 export const metadata: Metadata = {
-	title: "Astjan Selimaj | Full Stack Web Developer",
-	description: "Full Stack Web Developer | Next.js, React, TypeScript, MongoDB, MySQL",
+	title: `${data.name} | ${data.title}`
 };
 
 export default function RootLayout({

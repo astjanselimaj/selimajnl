@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-type Skill = [string, string, string];
+export type Skill = [string, string, string];
 
 export default function SkillsList({ skills }: { skills: Skill[] }) {
 	return (
