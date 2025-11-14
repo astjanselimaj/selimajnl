@@ -7,6 +7,7 @@ import mongodbLogo from "@/../public/mongodb.svg";
 import githubLogo from "@/../public/github.svg";
 import linkedinLogo from "@/../public/linkedin.svg";
 import mailLogo from "@/../public/mail.svg";
+import locationIcon from "@/../public/location.svg";
 import SkillsList from "./components/SkillsList";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -34,8 +35,13 @@ export default function Home() {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
 		>
+			
 			<h1 className="text-6xl font-light mb-1.5">Astjan Selimaj</h1>
-			<p className="text-2xl mb-3.5">Full Stack Web Developer</p>
+			<p className="text-2xl mb-1.5">Full Stack Web Developer</p>
+			<div className="flex items-center gap-1 mb-3.5">
+				<Image src={locationIcon} alt="Location" width={16} />
+				<p className="text-lg">Amsterdam, The Netherlands</p>
+			</div>
 			<SkillsList skills={skills} />
 			<hr className="text-[#243A60] my-4" />
 			<ContactList contacts={contacts} />
