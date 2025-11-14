@@ -4,15 +4,26 @@ import nextjsLogo from "@/../public/nextjs.svg";
 import typescriptLogo from "@/../public/typescript.svg";
 import reactLogo from "@/../public/react.svg";
 import mongodbLogo from "@/../public/mongodb.svg";
+import githubLogo from "@/../public/github.svg";
+import linkedinLogo from "@/../public/linkedin.svg";
+import mailLogo from "@/../public/mail.svg";
 import SkillsList from "./components/SkillsList";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import ContactList from "./components/ContactList";
 
-const skills: [string, string][] = [
-	["Next.js", nextjsLogo],
-	["TypeScript", typescriptLogo],
-	["React", reactLogo],
-	["MongoDB", mongodbLogo],
+const skills: [string, string, string][] = [
+	["Next.js", "bg-[#000000]", nextjsLogo],
+	["TypeScript", "bg-[#3178c6]", typescriptLogo],
+	["React", "bg-[#222222]", reactLogo],
+	["MongoDB", "bg-[#061621]", mongodbLogo],
 	//["MySQL", mysqlLogo]
+];
+
+const contacts: [string, string, string][] = [
+	["GitHub", githubLogo, "https://github.com/astjanselimaj"],
+	["LinkedIn", linkedinLogo, "https://linkedin.com/in/astjan-selimaj/"],
+	["Email", mailLogo, "mailto:info@selimaj.nl"]
 ];
 
 export default function Home() {
@@ -26,6 +37,8 @@ export default function Home() {
 			<h1 className="text-6xl font-light mb-1.5">Astjan Selimaj</h1>
 			<p className="text-2xl mb-3.5">Full Stack Web Developer</p>
 			<SkillsList skills={skills} />
+			<hr className="text-[#243A60] my-4" />
+			<ContactList contacts={contacts} />
 		</motion.div>
 	);
 }
