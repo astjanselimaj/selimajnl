@@ -9,7 +9,8 @@ const hostGrotesk = Host_Grotesk({
 });
 
 export const metadata: Metadata = {
-	title: `${data.name} | ${data.title}`
+	title: `${data.name} | ${data.title}`,
+	description: `${data.title} in ${data.location} | ${data.skills.map(s => s[0]).join(", ")}`
 };
 
 export default function RootLayout({
